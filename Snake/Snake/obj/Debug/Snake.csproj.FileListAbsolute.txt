@@ -1,0 +1,7 @@
+F:\Git\mysnake\Snake\Snake\bin\Debug\Snake.exe.config
+F:\Git\mysnake\Snake\Snake\bin\Debug\Snake.exe
+F:\Git\mysnake\Snake\Snake\bin\Debug\Snake.pdb
+F:\Git\mysnake\Snake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+F:\Git\mysnake\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+F:\Git\mysnake\Snake\Snake\obj\Debug\Snake.exe
+F:\Git\mysnake\Snake\Snake\obj\Debug\Snake.pdb
