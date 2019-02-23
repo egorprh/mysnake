@@ -10,9 +10,9 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(3, 5, '*');
-            Point p2 = new Point(6, 10, '#');
-            Point p3 = new Point(9, 5, '*');
+            Point p1 = new Point(3, 2, '*');
+            Point p2 = new Point(6, 4, '#');
+            Point p3 = new Point(9, 2, '*');
             Point p4 = new Point(12, 10, '#');
 
             List < Point > pList = new List<Point>();
@@ -25,6 +25,9 @@ namespace Snake
             {
                 i.Draw();
             }
+
+            HorizontalLine hLine = new HorizontalLine(3, 20, 12, '+');
+            hLine.Drow();
 
             Console.ReadLine();
         }
