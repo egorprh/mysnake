@@ -21,12 +21,10 @@ namespace Snake
             leftLine.Drow();
             rightLine.Drow();
 
-
-            //HorizontalLine hLine = new HorizontalLine(3, 20, 12, '-');
-            //hLine.Drow();
-
-            VerticalLine vLine = new VerticalLine(3, 15, 9, '/');
-            vLine.Drow();
+            //Drawing the Snake
+            Point p = new Point(4, 4, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Drow();
 
             Console.ReadLine();
         }
