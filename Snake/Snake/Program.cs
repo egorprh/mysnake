@@ -11,11 +11,20 @@ namespace Snake
         static void Main(string[] args)
         {
             Point p1 = new Point(3, 5, '*');
-            p1.Draw();
-            
-
             Point p2 = new Point(6, 10, '#');
-            p2.Draw();
+            Point p3 = new Point(9, 5, '*');
+            Point p4 = new Point(12, 10, '#');
+
+            List < Point > pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
+            pList.Add(p3);
+            pList.Add(p4);
+
+            foreach(Point i in pList)
+            {
+                i.Draw();
+            }
 
             Console.ReadLine();
         }
