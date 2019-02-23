@@ -26,8 +26,12 @@ namespace Snake
                 i.Draw();
             }
 
+
             HorizontalLine hLine = new HorizontalLine(3, 20, 12, '+');
             hLine.Drow();
+
+            VerticalLine vLine = new VerticalLine(3, 15, 9, '/');
+            vLine.Drow();
 
             Console.ReadLine();
         }
