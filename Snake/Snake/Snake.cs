@@ -33,6 +33,19 @@ namespace Snake
             head.Draw();//рисуем голову
         }
 
+        internal bool Eat(Point food)
+        {
+            Point head = getNextPoint();
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym;
+                pList.Add(food);
+                return true;
+            }
+            else
+                return false;
+        }
+
         public Point getNextPoint()
         {
             Point head = pList.Last();//определяем где находится голова

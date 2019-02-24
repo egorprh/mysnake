@@ -57,6 +57,11 @@ namespace Snake
             Draw();//отрисовываем пустоту
         }
 
+        public bool IsHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;//проверка на равенство координат
+        }
+
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;
