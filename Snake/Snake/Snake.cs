@@ -54,6 +54,17 @@ namespace Snake
             return nextPoint;//возвращаем значение
         }
 
+        internal bool IsHitTail()
+        {
+            var head = pList.Last();
+            for(int i = 0; i < pList.Count - 2; i++)
+            {
+                if (head.IsHit(pList[i]))
+                    return true;
+            }
+            return false;
+        }
+
         public void HandleKey(ConsoleKey key)//задаем направление движения змейки
         {
             if (key == ConsoleKey.LeftArrow)

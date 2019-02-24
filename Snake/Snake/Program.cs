@@ -13,17 +13,11 @@ namespace Snake
         {
             Console.SetBufferSize(80, 25);
 
-            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '-');
-            HorizontalLine downLine = new HorizontalLine(0, 78, 23, '-');
-            VerticalLine leftLine = new VerticalLine(0, 23, 0, '+');
-            VerticalLine rightLine = new VerticalLine(0, 23, 78, '+');
-            upLine.Drow();
-            downLine.Drow();
-            leftLine.Drow();
-            rightLine.Drow();
+            Walls walls = new Walls(80, 25);
+            walls.Draw();
 
             //Drawing the Snake
-            Point p = new Point(4, 4, '*');
+            Point p = new Point(4, 10, '*');
             Snake snake = new Snake(p, 3, Direction.RIGHT);
             snake.Drow();
 
@@ -35,6 +29,11 @@ namespace Snake
 
             while (true)//создаем бесконечный цикл
             {
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
+
                 if (snake.Eat(food))//если съела то появляется новая точка
                 {
                     food = foodCreator.CreateFood();
@@ -45,7 +44,7 @@ namespace Snake
                     snake.Move();
                 }
 
-                Thread.Sleep(100);// делаем задержку
+                Thread.Sleep(70);// делаем задержку
 
                 if (Console.KeyAvailable)//проверяем нажата ли какая либо клавиша
                 {
