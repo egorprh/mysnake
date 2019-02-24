@@ -51,9 +51,17 @@ namespace Snake
             Console.WriteLine(sym);
         }
 
+        public void Clear()
+        {
+            sym = ' ';//присваиваем sym пустую строку
+            Draw();//отрисовываем пустоту
+        }
+
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;
         }
+
+        
     }
 }
