@@ -40,5 +40,17 @@ namespace Snake
             nextPoint.Move(1, direction);//сдвиг точки по направлению дирекшион
             return nextPoint;//возвращаем значение
         }
+
+        public void HandleKey(ConsoleKey key)//задаем направление движения змейки
+        {
+            if (key == ConsoleKey.LeftArrow)
+                direction = Direction.LEFT;
+            else if (key == ConsoleKey.RightArrow)
+                direction = Direction.RIGHT;
+            else if (key == ConsoleKey.UpArrow)
+                direction = Direction.UP;
+            else if (key == ConsoleKey.DownArrow)
+                direction = Direction.DOWN;
+        }
     }
 }

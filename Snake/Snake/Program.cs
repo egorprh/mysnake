@@ -24,24 +24,21 @@ namespace Snake
 
             //Drawing the Snake
             Point p = new Point(4, 4, '*');
-            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            Snake snake = new Snake(p, 3, Direction.RIGHT);
             snake.Drow();
-            snake.Move();
-            Thread.Sleep(400);
-            snake.Move();
-            Thread.Sleep(400);
-            snake.Move();
-            Thread.Sleep(400);
-            snake.Move();
-            Thread.Sleep(400);
-            snake.Move();
-            Thread.Sleep(400);
-            snake.Move();
-            Thread.Sleep(400);
-            snake.Move();
-            Thread.Sleep(400);
-            snake.Move();
 
+            while (true)//создаем бесконечный цикл
+            {
+                if (Console.KeyAvailable)//проверяем нажата ли какая либо клавиша
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();//считываем нажатую клавишу
+                    snake.HandleKey(key.Key);//обработка нажатия
+                }
+                   
+                    Thread.Sleep(100);// делаем задержку
+                    snake.Move();//двигаем змейку
+                    //если ничего не нажато или нажаты Не стрелки, то змейка продолжает двигаться в "предыдущем" направлении
+            }
 
             Console.ReadLine();
         }
